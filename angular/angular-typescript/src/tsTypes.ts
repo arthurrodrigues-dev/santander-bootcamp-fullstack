@@ -45,3 +45,8 @@ let infos: (string | number)[] = ["felipe", 30, "arthur", "adriana", 22]
 // Tuples
 
 let boleto:[string, number, number] = ["agua conta", 199.90, 323232343]
+
+// Dates
+
+let aniversario:Date = new Date("2022-12-01 05:00")
+console.log(aniversario.toString());
