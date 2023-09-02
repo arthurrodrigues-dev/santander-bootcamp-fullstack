@@ -37,3 +37,38 @@ console.log(addToHello("Arthur"));
 
 console.log(CallToPhone("1234"));
 
+// interfaces (type x interface)
+
+type robot = {
+    id: number,
+    name: string
+}
+
+interface robot2 {
+    readonly id: string | number,
+    name: string,
+    sayHello(): string
+}
+
+const bot1: robot = {
+    id: 1,
+    name: "megaman"
+}
+
+class Pessoa implements robot2 {
+    id: string | number
+    name: string
+
+    constructor(id: string | number, name: string) {
+        this.id = id
+        this.name = name
+    }
+
+    sayHello(): string {
+        return `hello ${this.name}`
+    }
+}
+
+const p = new Pessoa(1, "Guts")
+console.log(p.sayHello());
+
